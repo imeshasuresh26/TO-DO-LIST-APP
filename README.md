@@ -1,4 +1,5 @@
-# Ex03 To-Do List using JavaScript
+
+## Ex03 To-Do List using JavaScript
 ## Date:16.11.2026
 ## Name: Imesha S
 ## Reg no : 212225040131
@@ -642,3 +643,4 @@ displayTasks();
 
 ## RESULT
 The program for creating To-do list using JavaScript is executed successfully.
+
