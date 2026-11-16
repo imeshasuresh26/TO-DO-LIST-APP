@@ -1,0 +1,289 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #eee6ff, #fcecf5);
+    min-height: 100vh;
+    padding: 40px 15px;
+    color: #39304a;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(80, 50, 100, 0.12);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #8055b5;
+    font-size: 32px;
+}
+
+header h1 span {
+    color: #e5a4c8;
+}
+
+header p {
+    color: #888;
+    margin-top: 7px;
+}
+
+.summary {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.summary-box {
+    flex: 1;
+    background: #f5efff;
+    padding: 16px 8px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.summary-box h2 {
+    color: #8055b5;
+    font-size: 25px;
+}
+
+.summary-box p {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.add-section {
+    background: #faf7ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ded5eb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    color: #39304a;
+}
+
+input:focus, select:focus {
+    border-color: #9668c8;
+}
+
+#taskInput {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.task-options {
+    display: flex;
+    gap: 10px;
+}
+
+.task-options select,
+.task-options input {
+    flex: 1;
+    min-width: 0;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#addBtn {
+    background: #8055b5;
+    color: white;
+}
+
+#addBtn:hover {
+    background: #684093;
+}
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-heading h3 {
+    margin: 0;
+}
+
+#searchInput {
+    width: 200px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.filters button {
+    background: #f1ebf8;
+    color: #76539c;
+}
+
+.filters button.active,
+.filters button:hover {
+    background: #8055b5;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    background: #faf8fc;
+    border: 1px solid #eee7f4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.task-item input[type="checkbox"] {
+    accent-color: #8055b5;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.task-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-name {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.task-date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.priority {
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.High {
+    background: #ffe0e0;
+    color: #d34a4a;
+}
+
+.Medium {
+    background: #fff0d6;
+    color: #bc8224;
+}
+
+.Low {
+    background: #e1f5e8;
+    color: #3b9360;
+}
+
+.edit-btn {
+    background: #e9e0f7;
+    color: #70499b;
+    padding: 8px 10px;
+}
+
+.delete-btn {
+    background: #ffe5e5;
+    color: #d34a4a;
+    padding: 8px 10px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 0.75;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #aaa;
+    padding: 25px 5px;
+}
+
+footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .summary {
+        gap: 7px;
+    }
+
+    .task-options {
+        flex-wrap: wrap;
+    }
+
+    .task-options select,
+    .task-options input {
+        flex: 1 1 40%;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    .task-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-wrap: wrap;
+    }
+}

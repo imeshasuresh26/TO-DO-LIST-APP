@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMate - To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>TaskMate <span>✦</span></h1>
+            <p>Your day, your tasks, your success!</p>
+        </header>
+
+        <section class="summary">
+            <div class="summary-box">
+                <h2 id="totalTasks">0</h2>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="summary-box">
+                <h2 id="completedTasks">0</h2>
+                <p>Completed</p>
+            </div>
+
+            <div class="summary-box">
+                <h2 id="pendingTasks">0</h2>
+                <p>Pending</p>
+            </div>
+        </section>
+
+        <section class="add-section">
+            <h3>+ Add a New Task</h3>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+            >
+
+            <div class="task-options">
+                <select id="priority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <input type="date" id="dueDate">
+
+                <button id="addBtn" onclick="addTask()">Add Task</button>
+            </div>
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="task-heading">
+                <h3>My Tasks</h3>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                    oninput="displayTasks()"
+                >
+            </div>
+
+            <div class="filters">
+                <button class="active" onclick="filterTasks('all', this)">All</button>
+                <button onclick="filterTasks('pending', this)">Pending</button>
+                <button onclick="filterTasks('completed', this)">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage">No tasks yet. Add your first task!</p>
+
+        </section>
+
+        <footer>
+            <p>Made with ♥ using HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
